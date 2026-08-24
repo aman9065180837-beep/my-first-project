@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-    <title>मेरा पहला वेबपेज</title>
+    <meta charset="UTF-8">
+    <title>कृष के लिए सरप्राइज!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        h1 { color: #ff3366; font-size: 40px; }
+        p { font-size: 20px; color: #333; }
+        .gift-box {
+            font-size: 100px;
+            cursor: pointer;
+            margin: 30px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .gift-box:hover { transform: scale(1.2); }
+        .btn {
+            background-color: #ff3366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* सरप्राइज मैसेज शुरू में छुपा रहेगा */
+        #surprise { display: none; margin-top: 30px; }
+        .fake-gift { font-size: 80px; margin: 10px; }
+    </style>
 </head>
 <body>
-    <h1>नमस्ते दुनिया! (Hello World)</h1>
-    <p>अमन ने अपना पहला सफल Git और GitHub प्रोजेक्ट बना लिया है।</p>
+
+    <h1>🎉 हैप्पी बर्थडे कृष! 🎉</h1>
+    <p>अमन की तरफ से तुम्हारे लिए एक बहुत ही कीमती और आलीशान गिफ्ट है।</p>
+    
+    <!-- गिफ्ट बॉक्स का डिज़ाइन -->
+    <div class="gift-box" onclick="showGift()">🎁</div>
+    
+    <br>
+    <button class="btn" onclick="showGift()">अपना गिफ्ट खोलने के लिए यहाँ क्लिक करो!</button>
+
+    <!-- यहाँ खुलेगा नकली गिफ्ट का सरप्राइज -->
+    <div id="surprise">
+        <h2>🏎️ ये लो तुम्हारी ब्रैंड न्यू चमचमाती 'Ferrari' कार! 🏎️</h2>
+        <div class="fake-gift">🏎️💨</div>
+        <p><strong>नोट:</strong> भाई, अभी बजट थोड़ा कम था, इसलिए असली वाली की फोटो से ही काम चला लो! पार्टी कब दे रहे हो? 😂</p>
+    </div>
+
+    <!-- छोटा सा जावास्क्रिप्ट कोड गिफ्ट दिखाने के लिए -->
+    <script>
+        function showGift() {
+            document.getElementById('surprise').style.display = 'block';
+            alert("बधाई हो कृष! तुम्हें अमन की तरफ से फरारी कार मिली है! 🚗");
+        }
+    </script>
+
 </body>
 </html>
